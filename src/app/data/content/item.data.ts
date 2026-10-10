@@ -186,7 +186,7 @@ export const ror2ItemData = [
     { name: "Lysate Cell", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
     { name: "Singularity Band", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.None] },
     { name: "Lost Seer's Lenses", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Safer Spaces", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Protective], stack: [ItemStack.Special] },
+    { name: "Safer Spaces", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Protective], stack: [ItemStack.Exponential] },
     { name: "Weeping Fungus", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Healing], stack: [ItemStack.Linear] },
     { name: "Plasma Shrimp", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Benthic Bloom", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
