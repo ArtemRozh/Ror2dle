@@ -41,8 +41,10 @@ export enum ItemStack {
     Exponential = 'Exponential',
     Hyperbolic = 'Hyperbolic',
     Special = 'Special',
+    Reciprocal = 'Reciprocal',
     None = 'None'
 }
+
 const imageUrlOverrides: Record<string, string> = {
     "Armor Piercing Rounds": "https://riskofrain2.wiki.gg/images/thumb/Armor-Piercing_Rounds.png/128px-Armor-Piercing_Rounds.png",
 };
@@ -130,68 +132,71 @@ export const ror2ItemData = [
     { name: "Hardlight Afterburner", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
     { name: "Alien Head", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Exponential] },
     { name: "Brainstalks", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
-    { name: "Sentient Meat Hook", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Hyperbolic] },
-    { name: "N'kuhana's Opinion", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Healing], stack: [ItemStack.Linear] },
-    { name: "Soulbound Catalyst", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Hyperbolic] },
+    { name: "Sentient Meat Hook", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Hyperbolic, ItemStack.Linear] },
+    { name: "N'kuhana's Opinion", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
+    { name: "Soulbound Catalyst", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
     { name: "57 Leaf Clover", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
-    { name: "Aegis", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Protective, ItemCategory.Healing], stack: [ItemStack.Linear] },
+    { name: "Aegis", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Protective, ItemCategory.Utility], stack: [ItemStack.Linear] },
     { name: "Ceremonial Dagger", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
-    { name: "Defensive Microbots", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Protective], stack: [ItemStack.Linear] },
+    { name: "Defensive Microbots", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Protective], stack: [ItemStack.Linear] },
     { name: "Dio's Best Friend", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
-    { name: "Frost Relic", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Utility, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
-    { name: "H3AD-5T v2", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Mobility], stack: [ItemStack.Linear] },
-    { name: "Happiest Mask", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
+    { name: "Frost Relic", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
+    { name: "H3AD-5T v2", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Mobility, ItemCategory.Damage], stack: [ItemStack.Reciprocal] },
+    { name: "Happiest Mask", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Utility, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
     { name: "Interstellar Desk Plant", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Healing, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
     { name: "Rejuvenation Rack", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Healing], stack: [ItemStack.Linear] },
     { name: "Resonance Disc", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
     { name: "Shattering Justice", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Unstable Tesla Coil", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Wake of Vultures", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Wake of Vultures", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
     { name: "Item Scrap, Red", rarity: ItemRarity.Red, source: ItemSource.Base, categories: [ItemCategory.Scrap], stack: [ItemStack.None] },
 
     // SotV reds
-    { name: "Ben's Raincoat", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Utility, ItemCategory.Protective], stack: [ItemStack.Linear] },
+    { name: "Ben's Raincoat", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Utility, ItemCategory.Protective], stack: [ItemStack.Linear, ItemStack.None] },
     { name: "Bottled Chaos", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
     { name: "Laser Scope", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Pocket I.C.B.M.", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Spare Drone Parts", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
+    { name: "Pocket I.C.B.M.", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear, ItemStack.None] },
+    { name: "Spare Drone Parts", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear, ItemStack.Exponential] },
     { name: "Symbiotic Scorpion", rarity: ItemRarity.Red, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
 
     // Yellows
     { name: "Titanic Knurl", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Healing], stack: [ItemStack.Linear] },
-    { name: "Queen's Gland", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Mired Urn", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Healing], stack: [ItemStack.Linear] },
+    // Having this as damage is questionable but would work for now
+    { name: "Queen's Gland", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Utility], stack: [ItemStack.Linear] },
+    // This one not being damage is also questionable but no one uses it for damage imho
+    { name: "Mired Urn", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Healing], stack: [ItemStack.Linear] },
     { name: "Molten Perforator", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Planula", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Healing], stack: [ItemStack.Linear] },
+    // Same as queens gland
     { name: "Halcyon Seed", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Utility], stack: [ItemStack.Linear] },
-    { name: "Little Disciple", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage, ItemCategory.Mobility], stack: [ItemStack.Linear] },
-    { name: "Pearl", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Healing], stack: [ItemStack.Linear] },
-    { name: "Irradiant Pearl", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Little Disciple", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
+    { name: "Pearl", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Irradiant Pearl", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Damage, ItemCategory.Healing, ItemCategory.Mobility, ItemCategory.Protective], stack: [ItemStack.Linear] },
     { name: "Genesis Loop", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Artifact Key", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.None] },
-    { name: "Shatterspleen", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
+    { name: "Shatterspleen", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear, ItemStack.None] },
     { name: "Charged Perforator", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Empathy Cores", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    // Same as queens gland
+    { name: "Empathy Cores", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Utility, ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Item Scrap, Yellow", rarity: ItemRarity.Yellow, source: ItemSource.Base, categories: [ItemCategory.Scrap], stack: [ItemStack.None] },
 
     // SotV Yellows
-    { name: "Defense Nucleus", rarity: ItemRarity.Yellow, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Defense Nucleus", rarity: ItemRarity.Yellow, source: ItemSource.SotV, categories: [ItemCategory.Damage, ItemCategory.OnKillEffect], stack: [ItemStack.Linear] },
 
     // Voids
     { name: "Encrusted Key", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility, ItemCategory.OnStageBeginEffect], stack: [ItemStack.None] },
     { name: "Polylute", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Voidsent Flame", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Needletick", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Tentabauble", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Tentabauble", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Hyperbolic, ItemStack.Linear] },
     { name: "Lysate Cell", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
-    { name: "Singularity Band", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.None] },
+    { name: "Singularity Band", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage, ItemCategory.Utility], stack: [ItemStack.None] },
     { name: "Lost Seer's Lenses", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
     { name: "Safer Spaces", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Protective], stack: [ItemStack.Exponential] },
     { name: "Weeping Fungus", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Healing], stack: [ItemStack.Linear] },
-    { name: "Plasma Shrimp", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage], stack: [ItemStack.Linear] },
-    { name: "Benthic Bloom", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Plasma Shrimp", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage, ItemCategory.Protective], stack: [ItemStack.Linear] },
+    { name: "Benthic Bloom", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility, ItemCategory.OnStageBeginEffect], stack: [ItemStack.Linear] },
     { name: "Pluripotent Larva", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Utility], stack: [ItemStack.Linear] },
-    { name: "Newly Hatched Zoea", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage, ItemCategory.Utility], stack: [ItemStack.Linear] },
+    { name: "Newly Hatched Zoea", rarity: ItemRarity.Purple, source: ItemSource.SotV, categories: [ItemCategory.Damage, ItemCategory.Utility], stack: [ItemStack.Reciprocal, ItemStack.Linear] },
 
     // Lunars
     { name: "Shaped Glass", rarity: ItemRarity.Blue, source: ItemSource.Base, categories: [ItemCategory.Damage], stack: [ItemStack.Exponential] },

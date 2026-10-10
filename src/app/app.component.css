@@ -146,3 +146,7 @@ footer > *{
 
     margin-top: 1vh;
 }
+
+.text-left{
+    text-align: left!important;
+}
