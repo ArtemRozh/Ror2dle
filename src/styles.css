@@ -1,1 +1,138 @@
-/* You can add global styles to this file, and also import other style files */
+:root, :root[data-theme="default"]{
+    --main-background-color: #0b141e;
+    --element-border-color: #102a3a;
+    --element-background-color: #1b3b4f;
+    --container-border-color: #102a3a;
+    --container-background-color: #12222eff;
+
+    --spceial-button-color-one: #38bdf8;
+    --spceial-button-color-two: #0284c7;
+
+    --hint-correct: #166534;
+    --hint-partial: #b45309;
+    --hint-wrong: #991b1b;
+}
+
+:root[data-theme="scorched"]{
+    --main-background-color: #1f1008;
+    --element-border-color: #4a2410;
+    --element-background-color: #7a4722;
+    --container-border-color: #4a2410;
+    --container-background-color: #2b140aff;
+
+    --spceial-button-color-one: #fb923c;
+    --spceial-button-color-two: #c2410c;
+
+    --hint-correct: #365314;
+    --hint-partial: #a16207;
+    --hint-wrong: #7f1d1d;
+}
+
+:root[data-theme="siren"]{
+    --main-background-color: #0a1814;
+    --element-border-color: #13382c;
+    --element-background-color: #23584a;
+    --container-border-color: #13382c;
+    --container-background-color: #0f2821ff;
+
+    --spceial-button-color-one: #34d399;
+    --spceial-button-color-two: #059669;
+
+    --hint-correct: #064e3b;
+    --hint-partial: #854d0e;
+    --hint-wrong: #9f1239;
+}
+
+:root[data-theme="null"]{
+    --main-background-color: #10161b;
+    --element-border-color: #1a3634;
+    --element-background-color: #285b58;
+    --container-border-color: #1a3634;
+    --container-background-color: #152625ff;
+
+    --spceial-button-color-one: #2dd4bf;
+    --spceial-button-color-two: #0d9488;
+
+    --hint-correct: #0f5132;
+    --hint-partial: #92400e;
+    --hint-wrong: #a01040;
+}
+
+:root[data-theme="void"]{
+    --main-background-color: #140e1c;
+    --element-border-color: #352248;
+    --element-background-color: #553a6e;
+    --container-border-color: #352248;
+    --container-background-color: #20152dff;
+
+    --spceial-button-color-one: #c084fc;
+    --spceial-button-color-two: #9333ea;
+
+    --hint-correct: #103f20;
+    --hint-partial: #78350f;
+    --hint-wrong: #701020;
+}
+
+:root {
+    --rarity-common: #828282;
+    --rarity-uncommon: #3ac53a;
+    --rarity-legendary: rgb(182, 34, 34);
+    --rarity-boss: #e2e225;
+    --rarity-lunar: #1e62df;
+    --rarity-void: #9963c9;
+    --rarity-equipment: #e07c17;
+    --rarity-meal: #FFA500;
+    --rarity-hallowed: #A020F0;
+    --rarity-hex: #00FF00;
+}
+
+html, body{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-root {
+  height: 100%;
+  width: 100%;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-border{
+    border: var(--container-border-color) 0.25vw solid;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+}
+
+.content-border{
+    border: var(--element-border-color) 0.15vw solid;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+}
+
+* {
+    font-size: 1.2vw;
+    font-family: "Bookman Old Style", Georgia, serif;
+    color: white;
+}
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+
+    color: white;
+}
+
+button, input {
+    cursor: pointer;
+}

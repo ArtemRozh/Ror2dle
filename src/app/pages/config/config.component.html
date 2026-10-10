@@ -1,0 +1,25 @@
+<div class="main-container">
+    <div class="selector-container container-border">
+        <div class="config-section-title"> Theme </div>
+
+        <div class="button-holder">
+            <button
+                *ngFor="let option of options"
+                class="theme-button"
+                [ngClass]="{'button-active': currentTheme === option, 'button-inactive': currentTheme !== option}"
+                (click)="setTheme(option)">
+                {{ option }}
+            </button>
+        </div>
+
+        <div class="config-section-title"> Item Sources </div>
+
+        <div class="config-selector">
+            <div *ngFor="let src of itemSources">
+                <input type="checkbox" [checked]="getSource(src)" (change)="setSource(src, $event)"> {{ src }}
+            </div>
+        </div>
+
+        <button (click)="clearBanned()"> Clear All Banned Items </button>
+    </div>
+</div>

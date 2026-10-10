@@ -1,0 +1,36 @@
+<div class="main-container">
+    <div class="content-container container-border">
+        <div class="controls-bar">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Search items..." class="number-input">
+            <select [(ngModel)]="filterState" class="number-input">
+                <option value="all">All</option>
+                <option value="available">Available</option>
+                <option value="banned">Banned</option>
+            </select>
+            <button (click)="toggleDisplayType()" class="number-input">Display Type: {{ displayType }}</button>
+        </div>
+
+        <div *ngIf="displayType === 1" class="items-grid-mode1">
+            <div *ngFor="let item of items" 
+                 class="item-card-mode1 content-border"
+                 [ngClass]="[getRarityClass(item.rarity), isBanned(item.name) ? 'banned-card-mode1' : '']"
+                 (click)="toggleItem(item.name)">
+                <div class="name-box content-border">
+                    <span class="item-name">{{ item.name }}</span>
+                </div>
+                <div class="image-box content-border">
+                    <img [src]="item.image" alt="{{item.name}}" [class.banned-image-mode1]="isBanned(item.name)">
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="displayType === 2" class="items-grid-mode2">
+            <div *ngFor="let item of items" 
+                 class="item-card-mode2"
+                 [ngClass]="[isBanned(item.name) ? 'banned-card-mode2' : getRarityClass(item.rarity)]"
+                 (click)="toggleItem(item.name)">
+                <img [src]="item.image" alt="{{item.name}}" [class.banned-image-mode2]="isBanned(item.name)">
+            </div>
+        </div>
+    </div>
+</div>

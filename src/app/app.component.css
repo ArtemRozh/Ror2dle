@@ -1,0 +1,148 @@
+.content-wrapper{
+    height: 77%;
+    width: 95%;
+}
+
+.button-holder{
+    width: 12%;
+    height: 12%;
+
+    margin-top: 1vh;
+    padding: 1px 5px;
+    background-color: var(--container-background-color);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-holder{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    width: 95%;
+    height: 55%;
+}
+
+.link-button{
+    background: linear-gradient(120deg, var(--element-background-color), var(--element-background-color));
+    height: 95%;
+    width: 27%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: var(--element-border-color) 0.15vw solid;
+}
+
+.link-button > span{
+    color: white;
+    font-weight: bold;
+}
+
+.display-button{
+    width: 95%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    border: var(--element-border-color) 0.15vw solid;
+}
+
+.link-button.active {
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+}
+
+.link-button.active > span {
+    color: black;
+}
+
+footer{
+    background-color: var(--element-background-color);
+
+    width: 100%;
+    height: 7.4%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.8vh;
+}
+
+.version-text-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--container-background-color);
+    border-color: var(--element-border-color);
+
+    padding: 0 1vw;
+    height: 60%;
+}
+
+.details-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 40%;
+}
+
+footer > *{
+    margin: 0 2vw 0 2vw;
+}
+
+.signature-text{
+    display: flex;
+    align-items: center;
+}
+
+#hint-button{
+    margin-left: 5%;
+    width: 2.2vw;
+    height: 2.2vw;
+    cursor: pointer;
+    background: linear-gradient(120deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+}
+
+#absolute-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    background-color: var(--container-background-color);
+
+    width: 42%;
+    height: 86%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#absolute-details > span{
+    background-color: var(--element-background-color);
+
+    border: var(--element-border-color) 0.15vw solid;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+
+    text-align: center;
+    padding: 0.1vw 0.4vw;
+
+    width: 90%;
+
+    margin-top: 1vh;
+}

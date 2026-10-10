@@ -1,0 +1,172 @@
+.content-container {
+    width: 43%;
+    height: 90%;
+    background-color: var(--container-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    gap: 2vh;
+}
+
+.win-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    margin: 1vh 0;
+}
+
+.win-screen h3 {
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+.action-btn {
+    background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    border: var(--element-border-color) 0.15vw solid;
+    padding: 0.8vh 1.5vw;
+    border-radius: 0.5vw;
+    color: white;
+    cursor: pointer;
+}
+
+.guesser-controls {
+    position: relative;
+    width: 60%;
+    margin-bottom: 2vh;
+}
+
+.search-input {
+    width: 100% !important;
+    background-color: var(--container-background-color) !important;
+    color: white !important;
+    border: var(--element-border-color) 0.15vw solid !important;
+    box-sizing: border-box;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 25vh;
+    overflow-y: auto;
+    background-color: var(--container-background-color);
+    z-index: 10;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 0.5vh 1vw;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: var(--element-background-color);
+}
+
+.dropdown-item img {
+    width: 2vw;
+    height: 2vw;
+    object-fit: contain;
+}
+
+.guesses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 100%;
+    align-items: center;
+
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    margin-bottom: 8vh;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--element-background-color) transparent;
+}
+
+.guesses-container::-webkit-scrollbar {
+    width: 0.6vw;
+}
+.guesses-container::-webkit-scrollbar-thumb {
+    background: var(--element-background-color);
+    border-radius: 0.3vw;
+}
+.guesses-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.guess-row {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.guess-square {
+    width: 6.5vw;
+    height: 6.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.4vw;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.guess-square img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.feedback-base .square-word {
+    font-size: 0.9vw;
+    word-break: normal;
+}
+
+.small-text {
+    font-size: 0.75vw;
+    word-break: break-word;
+}
+
+.fixed-restart-container {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--container-background-color);
+    padding: 1vh 0;
+}
+
+.feedback-correct { background-color: var(--hint-correct) !important; }
+.feedback-partial { background-color: var(--hint-partial) !important; }
+.feedback-wrong { background-color: var(--hint-wrong) !important; }
+
+.rarity-common { background-color: var(--rarity-common); }
+.rarity-uncommon { background-color: var(--rarity-uncommon); }
+.rarity-legendary { background-color: var(--rarity-legendary); }
+.rarity-boss { background-color: var(--rarity-boss); }
+.rarity-lunar { background-color: var(--rarity-lunar); }
+.rarity-void { background-color: var(--rarity-void); }
+.rarity-equipment { background-color: var(--rarity-equipment); }
+.rarity-meal { background-color: var(--rarity-meal); }
+.rarity-hallowed { background-color: var(--rarity-hallowed); }
+.rarity-hex { background-color: var(--rarity-hex); }

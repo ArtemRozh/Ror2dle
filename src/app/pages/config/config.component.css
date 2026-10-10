@@ -1,0 +1,160 @@
+.selector-container{
+    background-color: var(--container-background-color);
+    border: var(--container-border-color) 0.25vw solid;
+    width: 43%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2vh;
+    padding-top: 2vh;
+    align-items: center;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.selector-container > * {
+    background-color: var(--element-background-color);
+    border: var(--element-border-color) 0.15vw solid;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+
+    width: 80%;
+    height: 7%;
+    flex-shrink: 0;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.config-section-title{
+    width: 50%!important;
+}
+
+.selector-container::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.selector-container::-webkit-scrollbar-thumb {
+    background-color: var(--element-background-color);
+    border-radius: 15px;
+}
+
+.selector-container::-webkit-scrollbar-track {
+    background: var(--main-background-color);
+}
+
+.selector-container > button{
+    background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    color: white;
+}
+
+.config-selector{
+    height: 20%!important;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 0.4vh;
+    align-items: center;
+    justify-content: flex-start !important;
+    padding: 0.5vh 0 !important;
+}
+
+.config-selector > div{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    color: white;
+    font-size: 0.9vw;
+}
+
+.config-selector > div > input{
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-right: 0.5vw;
+    accent-color: var(--spceial-button-color-one);
+    flex-shrink: 0;
+}
+
+.config-selector::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.config-selector::-webkit-scrollbar-thumb {
+    background-color: var(--element-background-color);
+    border-radius: 15px;
+}
+
+.config-selector::-webkit-scrollbar-track {
+    background: var(--main-background-color);
+}
+
+.save-selector{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start!important;
+    width: 60%!important;
+    height: 7%!important;
+    padding: 0.5vh!important;
+    margin-bottom: 2vh!important;
+}
+
+.save-selector > button {
+  background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+  border: var(--element-border-color) 0.15vw solid;
+  border-radius: 0.7vw;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number-input {
+    background: var(--container-background-color);
+    border: 3px solid var(--element-border-color);
+    width: 4vw!important;
+    height: auto!important;
+    margin-left: 1vw;
+    text-align: center;
+    color: white;
+}
+
+.button-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.theme-button {
+    width: 18%;
+}
+
+.button-active {
+    background: linear-gradient(100deg, var(--spceial-button-color-one), var(--spceial-button-color-two));
+    border: var(--element-border-color) 0.15vw solid;
+    color: white;
+}
+
+.button-inactive {
+    background: var(--element-background-color);
+    border: var(--element-border-color) 0.15vw solid;
+    color: white;
+}

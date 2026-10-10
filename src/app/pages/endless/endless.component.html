@@ -1,0 +1,61 @@
+<div class="main-container">
+    <div class="content-container container-border">
+        <h2>Endless Guesser</h2>
+
+        <div *ngIf="!gameStarted" class="start-screen">
+            <button class="action-btn" (click)="startGame()">Begin Game</button>
+        </div>
+
+        <div *ngIf="isWon" class="win-screen">
+            <h3>Secret item is {{ secretItem?.name }}.</h3>
+            <button class="action-btn" (click)="startGame()">Play Again</button>
+        </div>
+
+        <div *ngIf="gameStarted && !isWon" class="guesser-controls">
+            <div class="search-wrapper">
+                <input type="text" 
+                       [(ngModel)]="searchQuery" 
+                       (focus)="isDropdownOpen = true"
+                       placeholder="Search item to guess..." 
+                       class="number-input search-input">
+                
+                <div *ngIf="isDropdownOpen && filteredItems.length > 0" class="dropdown-list content-border">
+                    <div *ngFor="let item of filteredItems" class="dropdown-item" (click)="selectItem(item)">
+                        <img [src]="item.image" alt="{{item.name}}">
+                        <span>{{ item.name }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="guesses-container" *ngIf="guesses.length > 0">
+            <div *ngFor="let g of guesses" class="guess-row">
+                <div class="guess-square content-border" [ngClass]="getRarityClass(g.item.rarity)">
+                    <img [src]="g.item.image" alt="{{g.item.name}}">
+                </div>
+
+                <div class="guess-square content-border feedback-base" [ngClass]="g.rarityMatch ? 'feedback-correct' : 'feedback-wrong'">
+                    <span class="square-word">{{ g.item.rarity }}</span>
+                </div>
+
+                <div class="guess-square content-border feedback-base" [ngClass]="g.sourceMatch ? 'feedback-correct' : 'feedback-wrong'">
+                    <span class="small-text">{{ g.item.source }}</span>
+                </div>
+
+                <div class="guess-square content-border feedback-base" 
+                     [ngClass]="g.categoryMatchStatus === 'correct' ? 'feedback-correct' : (g.categoryMatchStatus === 'partial' ? 'feedback-partial' : 'feedback-wrong')">
+                    <span class="small-text">{{ g.item.categories.join(', ') }}</span>
+                </div>
+
+                <div class="guess-square content-border feedback-base" 
+                     [ngClass]="g.stackMatchStatus === 'correct' ? 'feedback-correct' : (g.stackMatchStatus === 'partial' ? 'feedback-partial' : 'feedback-wrong')">
+                    <span class="small-text">{{ g.item.stack.join(', ') }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed-restart-container" *ngIf="gameStarted">
+            <button class="action-btn" (click)="startGame()">Restart Game</button>
+        </div>
+    </div>
+</div>

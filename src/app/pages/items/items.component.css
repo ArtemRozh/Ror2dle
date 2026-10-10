@@ -1,0 +1,139 @@
+.content-container {
+    width: 90%;
+    height: 90%;
+    background-color: var(--container-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.controls-bar {
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 2vh;
+    flex-shrink: 0;
+}
+
+.items-grid-mode1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11vw, 1fr));
+    gap: 1vh 1vw;
+    justify-items: center;
+}
+
+.item-card-mode1 {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1vh 0.5vw;
+    box-sizing: border-box;
+}
+
+.name-box {
+    width: 90%;
+    height: 4vh;
+    background-color: var(--container-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2vw;
+    box-sizing: border-box;
+}
+
+.item-name {
+    font-size: 0.8vw;
+    text-align: center;
+    color: white;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.image-box {
+    width: 60%;
+    height: 7vh;
+    background-color: var(--container-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.banned-card-mode1 {
+    background-color: var(--element-background-color) !important;
+}
+
+.banned-image-mode1 {
+    filter: brightness(0);
+}
+
+.items-grid-mode2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15vw;
+    justify-content: center;
+}
+
+.item-card-mode2 {
+    width: 4.5vw;
+    height: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.item-card-mode2 img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.banned-card-mode2 {
+    background-color: var(--element-background-color) !important;
+}
+
+.banned-image-mode2 {
+    filter: brightness(0);
+}
+
+.number-input {
+    background: var(--container-background-color);
+    border: var(--element-border-color) 0.15vw solid;
+    color: white;
+    padding: 0.4vh 0.8vw;
+    border-radius: 0.4vw;
+}
+
+select.number-input option {
+    background: var(--container-background-color);
+    color: white;
+}
+
+.rarity-common { background-color: var(--rarity-common); }
+.rarity-uncommon { background-color: var(--rarity-uncommon); }
+.rarity-legendary { background-color: var(--rarity-legendary); }
+.rarity-boss { background-color: var(--rarity-boss); }
+.rarity-lunar { background-color: var(--rarity-lunar); }
+.rarity-void { background-color: var(--rarity-void); }
+.rarity-equipment { background-color: var(--rarity-equipment); }
+.rarity-meal { background-color: var(--rarity-meal); }
+.rarity-hallowed { background-color: var(--rarity-hallowed); }
+.rarity-hex { background-color: var(--rarity-hex); }
